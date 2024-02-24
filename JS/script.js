@@ -101,14 +101,13 @@ getEle("tinhThue").onclick = function () {
     var peopleDependent = +getEle("peopleDependent").value;
     var thuNhapChiuThue = tinhThuNhapChiuThue(totalIncome, peopleDependent);
     var thueSuat = tinhThueSuat(thuNhapChiuThue);
-    thueSuat = thueSuat.toLocaleString('vi');
 
     if (thueSuat <= 0) {
         alert("Số tiền thu nhập không hợp lệ");
         getEle("result__bai3").innerHTML = `Họ tên ${fullName}; Tiền thuế thu nhập cá nhân: 0 VND`;
     }
     else {
-        getEle("result__bai3").innerHTML = `Họ tên ${fullName}; Tiền thuế thu nhập cá nhân: ${thueSuat} VND`;
+        getEle("result__bai3").innerHTML = `Họ tên ${fullName}; Tiền thuế thu nhập cá nhân: ${thueSuat.toLocaleString('vi')} VND`;
     }
 }
 
