@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bài tập buổi 5</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    section {
+      min-height: 100vh;
+    }
+    h1 {
+      padding: 30px 0;
+      text-align: center;
+    }
+    .result {
+      height: 50px;
+    }
+  </style>
+  <body>
+    <!-- Bài 1 -->
+    <section>
+      <div class="container">
+        <h1>Quản lý tuyển sinh</h1>
+        <div class="row">
+          <div class="form-group col-4">
+            <label for="diemChuan"></label>
+            <input
+              type="number"
+              name="diemChuan"
+              id="diemChuan"
+              class="form-control"
+              placeholder="Điểm chuẩn"
+              aria-describedby="helpId"
+            />
+          </div>
+          <div class="form-group col-4">
+            <label for="khuVuc"></label>
+            <select class="form-control" name="khuVuc" id="khuVuc">
+              <option value="0">Chọn khu vực</option>
+              <option value="2">A</option>
+              <option value="1">B</option>
+              <option value="0.5">C</option>
+            </select>
+          </div>
+          <div class="form-group col-4">
+            <label for="doiTuong"></label>
+            <select class="form-control" name="doiTuong" id="doiTuong">
+              <option value="0">Chọn đối tượng</option>
+              <option value="2.5">1</option>
+              <option value="1.5">2</option>
+              <option value="1">3</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-4">
+            <label for="diem1"></label>
+            <input
+              type="number"
+              name="diem1"
+              id="diem1"
+              class="form-control"
+              placeholder="Điểm môn 1"
+              aria-describedby="helpId"
+            />
+          </div>
+          <div class="form-group col-4">
+            <label for="diem2"></label>
+            <input
+              type="number"
+              name="diem2"
+              id="diem2"
+              class="form-control"
+              placeholder="Điểm môn 2"
+              aria-describedby="helpId"
+            />
+          </div>
+          <div class="form-group col-4">
+            <label for="diem3"></label>
+            <input
+              type="number"
+              name="diem3"
+              id="diem3"
+              class="form-control"
+              placeholder="Điểm môn 3"
+              aria-describedby="helpId"
+            />
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" id="qlTuyenSinh">
+          Kết quả
+        </button>
+        <div class="result alert alert-success mt-4" id="result__bai1"></div>
+      </div>
+    </section>
+
+    <!-- Bài 2 -->
+    <section>
+      <div class="container">
+        <h1>Tính tiền điện</h1>
+        <div class="row">
+          <div class="form-group col-6">
+            <label for=""></label>
+            <input
+              type="text"
+              name=""
+              id="hoTen"
+              class="form-control"
+              placeholder="Nhập họ tên"
+              aria-describedby="helpId"
+            />
+          </div>
+          <div class="form-group col-6">
+            <label for=""></label>
+            <input
+              type="number"
+              name=""
+              id="dienSd"
+              class="form-control"
+              placeholder="Nhập số kw"
+              aria-describedby="helpId"
+            />
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" id="btnTienDien">
+          Tính tiền điện
+        </button>
+        <div class="result alert alert-success mt-2" id="result__bai2"></div>
+      </div>
+    </section>
+
+    <!-- Bài 3 -->
+    <section>
+      <div class="container">
+        <h1>Tính thuế thu nhập cá nhân</h1>
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label for=""></label>
+            <input
+              type="text"
+              name=""
+              id="fullName"
+              class="form-control"
+              placeholder="Nhập họ tên"
+              aria-describedby="helpId"
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for=""></label>
+            <input
+              type="number"
+              name=""
+              id="totalIncome"
+              class="form-control"
+              placeholder="Tổng thu nhập năm"
+              aria-describedby="helpId"
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for=""></label>
+            <input
+              type="number"
+              name=""
+              id="peopleDependent"
+              class="form-control"
+              placeholder="Số người phụ thuộc"
+              aria-describedby="helpId"
+            />
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary" id="tinhThue">
+          Tính tiền thuế
+        </button>
+        <div class="result alert alert-success mt-2" id="result__bai3"></div>
+      </div>
+    </section>
+
+    <!-- Bài 4 -->
+    <section>
+      <div class="container">
+        <h1>Tính tiền cáp</h1>
+        <div class="row">
+          <div class="col-4">
+            <div class="form-group">
+              <label for=""></label>
+              <select class="form-control" name="" id="loaiKhachHang">
+                <option value="chon">Chọn loại khách hàng</option>
+                <option value="nhaDan">Nhà dân</option>
+                <option value="doanhNghiep">Doanh nghiệp</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+              <label for=""></label>
+              <input type="text" name="" id="maKH" class="form-control" placeholder="Nhập mã khách hàng" aria-describedby="helpId">
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-group">
+              <label for=""></label>
+              <input type="text" name="" id="soKenh" class="form-control" placeholder="Số kênh cao cấp" aria-describedby="helpId">
+            </div>
+          </div>
+          <div class="col-4 d-none" id="soKN">
+            <div class="form-group">
+              <label for=""></label>
+              <input type="number" name="" id="soKetNoi" class="form-control" placeholder="Số kết nối" aria-describedby="helpId">
+            </div>
+          </div>
+        </div>
+        <button type="button" id="tinhTienCap" class="btn btn-primary">Tính tiền cáp</button>
+        <div class="result alert alert-success mt-2" id="result__bai4"></div>
+      </div>
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script JS -->
+    <script src="./JS/script.js"></script>
+  </body>
+</html>
